@@ -36,16 +36,16 @@ main {
                 z-index: 2;
             }
             &.seg {
-                background-image: url(../../assets/vacuna.jpeg);
+                background-image: url('../../assets/vacuna.jpeg');
             }
             &.efi {
-                background-image: url(../../assets/eficacia.jpg);
+                background-image: url('../../assets/eficacia.jpg');
             }
             &.vac {
-                background-image: url(../../assets/vacunate.jpg);
+                background-image: url('../../assets/vacunate.jpg');
             }
             &.cidi {
-                background-image: url(../../assets/cidi.png);
+                background-image: url('../../assets/cidi.png');
                 background-position: 50%;
             }
             .bg-black {
