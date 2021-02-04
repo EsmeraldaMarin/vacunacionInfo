@@ -44,8 +44,7 @@ main.questionsMain {
         }
         .sec2 {
             padding: 80px 200px 100px;
-            clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
-            background-color: $tColor;
+            clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
         }
         .sec1 {
             .image {

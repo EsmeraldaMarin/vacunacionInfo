@@ -1,4 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@keyframes desplegar {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 308px;
+    overflow: inherit;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -20,12 +30,115 @@ header {
   height: 50px;
   position: sticky;
   top: 0;
-  z-index: 3;
+  z-index: 1000;
+}
+
+header > a {
+  display: flex;
+  height: 50px;
+  width: 70%;
+  align-items: center;
+  padding: 20px;
+  color: #fff;
+  font-weight: bold;
+}
+
+header nav {
+  height: 0;
+  overflow: hidden;
+  background-color: #0a043c;
+}
+
+header nav ul {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header nav ul li {
+  list-style: none;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #fff;
+  position: relative;
+}
+
+header nav ul li a {
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  padding: 15px 0;
+}
+
+header nav ul li:last-child {
+  border-bottom: 0;
+}
+
+header .iconosMenu {
+  position: absolute;
+  right: 20px;
+  top: 17px;
+}
+
+header .iconosMenu i {
+  color: #fff;
+  font-size: 20px;
+  display: none;
+}
+
+header .iconosMenu i.iconActive {
+  display: block;
+}
+
+header nav.menuActive {
+  height: auto;
+  animation-name: desplegar;
+  animation-duration: 0.7s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
 }
 
 @media (min-width: 1000px) {
   header {
     height: 80px;
+    display: flex;
+  }
+  header nav {
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+  }
+  header nav ul {
+    height: 100%;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  header nav ul li {
+    border: 0;
+    width: auto;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    transition: background-color 0.25s ease;
+  }
+  header nav ul li:hover {
+    background-color: #83cce4;
+  }
+  header nav ul li a {
+    line-height: 80px;
+    padding: 0 30px;
+    font-weight: bold;
+    color: #fff;
+  }
+  header > a {
+    height: 100%;
+    width: 25%;
+  }
+  header .iconosMenu {
+    display: none;
   }
 }
 
@@ -307,7 +420,7 @@ main.questionsMain .sec1 .fuente a {
 main.questionsMain .sec2 {
   padding: 50px 20px;
   clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
-  background-color: #a3ddcb;
+  background-color: #83cce4;
 }
 
 @media (min-width: 1000px) {
@@ -316,8 +429,7 @@ main.questionsMain .sec2 {
   }
   main.questionsMain .sec2 {
     padding: 80px 200px 100px;
-    clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
-    background-color: #a3ddcb;
+    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
   }
   main.questionsMain .sec1 .image {
     overflow: auto;

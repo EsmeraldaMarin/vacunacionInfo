@@ -4,9 +4,109 @@ header {
     height: 50px;
     position: sticky;
     top: 0;
-    z-index: 3;
+    z-index: 1000;
+    > a {
+        display: flex;
+        height: 50px;
+        width: 70%;
+        align-items: center;
+        padding: 20px;
+        color: #fff;
+        font-weight: bold;
+    }
+    nav {
+        height: 0;
+        overflow: hidden;
+        background-color: $pColor;
+
+        ul {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            li {
+                list-style: none;
+                width: 100%;
+                text-align: center;
+                border-bottom: 1px solid #fff;
+                position: relative;
+                a {
+                    color: #fff;
+                    width: 100%;
+                    height: 100%;
+                    display: inline-block;
+                    padding: 15px 0;
+
+                }
+                &:last-child {
+                    border-bottom: 0;
+                }
+            }
+        }
+    }
+    .iconosMenu {
+        position: absolute;
+        right: 20px;
+        top: 17px;
+        i {
+            color: #fff;
+            font-size: 20px;
+            display: none;
+            &.iconActive {
+                display: block;
+            }
+        }
+    }
+
+    nav.menuActive {
+        height: auto;
+        //margin-top: 30px;
+        
+        animation-name: desplegar;
+        animation-duration: 0.7s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+       
+    }
+
     @media (min-width: $breakpoint) {
         height: 80px;
+        display: flex;
+        nav {
+            width: 100%;
+            height: 100%;
+            background-color: inherit;
+            ul {
+                height: 100%;
+                flex-direction: row;
+                justify-content: flex-end;
+                li {
+                    border: 0;
+                    width: auto;
+                    height: 100%;
+                    list-style: none;
+                    display: flex;
+                    transition: background-color 0.25s ease;
+                    &:hover {
+                        background-color: $tColor;
+                    }
+                    a {
+                        line-height: 80px;
+                        padding: 0 30px;
+                        font-weight: bold;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        > a {
+            height: 100%;
+            width: 25%;
+        }
+        .iconosMenu {
+            display: none;
+        }
     }
 }
 main {
@@ -14,7 +114,7 @@ main {
         width: 100%;
         height: 180px;
         position: relative;
-        background-image: url('https://www.cba.gov.ar/wp-content/uploads/2021/01/Primer-Jornada-Vacunaci%C3%B3n-web.jpg');
+        background-image: url("https://www.cba.gov.ar/wp-content/uploads/2021/01/Primer-Jornada-Vacunaci%C3%B3n-web.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         display: flex;
