@@ -1,0 +1,159 @@
+main {
+    .cardsSection {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        margin: 50px 0;
+        .card {
+            width: 75%;
+            height: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border: 0;
+            border-radius: 25px;
+            box-shadow: 0 0 10px #888;
+            margin: 10px 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.5s ease;
+
+            h2 {
+                font-weight: bold;
+                color: #fff;
+                z-index: 2;
+                font-size: 1.8em;
+            }
+            i {
+                font-size: 30px;
+                color: #fff;
+                z-index: 2;
+            }
+            &.seg {
+                background-image: url(../../assets/vacuna.jpeg);
+            }
+            &.efi {
+                background-image: url(../../assets/eficacia.jpg);
+            }
+            &.vac {
+                background-image: url(../../assets/vacunate.jpg);
+            }
+            &.cidi {
+                background-image: url(../../assets/cidi.png);
+                background-position: 50%;
+            }
+            .bg-black {
+                width: 100%;
+                height: 100%;
+                border-radius: 25px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: rgba($color: #000000, $alpha: 0.6);
+            }
+            .questions {
+                display: none;
+                z-index: 2;
+            }
+            &.cardActive {
+                height: auto;
+                padding: 50px 15px;
+                .questions {
+                    display: block;
+                    font-size: 14px;
+                    text-align: left;
+                    color: #fff;
+                    li{
+                        margin: 10px 0;
+                        list-style: none;
+                    }
+                }
+                i{
+                    margin-top: 10px;
+                    transform: rotate(180deg);
+                }
+            }
+        }
+        @media (min-width: $breakpoint) {
+            display: grid;
+            grid-template-columns: repeat(6, 200px);
+            grid-template-rows: repeat(2, 270px);
+            grid-gap: 30px;
+            justify-content: center;
+            .card {
+                width: 100%;
+                height: 100%;
+                &.preg {
+                    grid-area: 1/1/2/4;
+                }
+                &.seg {
+                    grid-area: 1/4/2/7;
+                }
+                &.efi {
+                    grid-area: 2/1/3/3;
+                }
+                &.vac {
+                    grid-area: 2/3/3/5;
+                }
+                &.cidi {
+                    grid-area: 2/5/3/7;
+                }
+
+                .questions {
+                    padding: 0;
+                    padding-left: 10px;
+                    opacity: 0;
+                    position: absolute;
+                    color: #fff;
+                    text-align: left;
+                    li {
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                .bg-black {
+                    background-color: rgba($color: #000000, $alpha: 0.8);
+                }
+                &.seg,
+                &.efi {
+                    .questions {
+                        font-size: 14px;
+                    }
+                }
+                &.seg,
+                &.efi,
+                &.preg {
+                    &:hover {
+                        padding: 10px;
+
+                        h2 {
+                            margin: -200px 0 0 0;
+                            transition: margin 0.5s ease;
+                        }
+                        .questions {
+                            opacity: 1;
+                            top: 70px;
+                            transition: all 1s ease;
+                        }
+                        &.seg,
+                        &.efi {
+                            .questions {
+                                width: 90%;
+                            }
+                        }
+                    }
+                }
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+}

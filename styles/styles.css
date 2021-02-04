@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", arial;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+  background-color: #01AAE3;
+  height: 50px;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+@media (min-width: 1000px) {
+  header {
+    height: 80px;
+  }
+}
+
+main .headSection {
+  width: 100%;
+  height: 180px;
+  position: relative;
+  background-image: url(../../assets/fondo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+main .headSection .bg-black {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+main .headSection h1,
+main .headSection p {
+  z-index: 2;
+}
+
+main .headSection p {
+  font-size: 1.4em;
+}
+
+main .headSection h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+@media (min-width: 1000px) {
+  main .headSection {
+    height: 280px;
+    background-position-y: 50%;
+  }
+  main .headSection p {
+    font-size: 2.1em;
+  }
+  main .headSection h1 {
+    font-size: 4em;
+  }
+}
+
+main .cardsSection {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0;
+}
+
+main .cardsSection .card {
+  width: 75%;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 0;
+  border-radius: 25px;
+  box-shadow: 0 0 10px #888;
+  margin: 10px 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+main .cardsSection .card h2 {
+  font-weight: bold;
+  color: #fff;
+  z-index: 2;
+  font-size: 1.8em;
+}
+
+main .cardsSection .card i {
+  font-size: 30px;
+  color: #fff;
+  z-index: 2;
+}
+
+main .cardsSection .card.seg {
+  background-image: url(../../assets/vacuna.jpeg);
+}
+
+main .cardsSection .card.efi {
+  background-image: url(../../assets/eficacia.jpg);
+}
+
+main .cardsSection .card.vac {
+  background-image: url(../../assets/vacunate.jpg);
+}
+
+main .cardsSection .card.cidi {
+  background-image: url(../../assets/cidi.png);
+  background-position: 50%;
+}
+
+main .cardsSection .card .bg-black {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+main .cardsSection .card .questions {
+  display: none;
+  z-index: 2;
+}
+
+main .cardsSection .card.cardActive {
+  height: auto;
+  padding: 50px 15px;
+}
+
+main .cardsSection .card.cardActive .questions {
+  display: block;
+  font-size: 14px;
+  text-align: left;
+  color: #fff;
+}
+
+main .cardsSection .card.cardActive .questions li {
+  margin: 10px 0;
+  list-style: none;
+}
+
+main .cardsSection .card.cardActive i {
+  margin-top: 10px;
+  transform: rotate(180deg);
+}
+
+@media (min-width: 1000px) {
+  main .cardsSection {
+    display: grid;
+    grid-template-columns: repeat(6, 200px);
+    grid-template-rows: repeat(2, 270px);
+    grid-gap: 30px;
+    justify-content: center;
+  }
+  main .cardsSection .card {
+    width: 100%;
+    height: 100%;
+  }
+  main .cardsSection .card.preg {
+    grid-area: 1/1/2/4;
+  }
+  main .cardsSection .card.seg {
+    grid-area: 1/4/2/7;
+  }
+  main .cardsSection .card.efi {
+    grid-area: 2/1/3/3;
+  }
+  main .cardsSection .card.vac {
+    grid-area: 2/3/3/5;
+  }
+  main .cardsSection .card.cidi {
+    grid-area: 2/5/3/7;
+  }
+  main .cardsSection .card .questions {
+    padding: 0;
+    padding-left: 10px;
+    opacity: 0;
+    position: absolute;
+    color: #fff;
+    text-align: left;
+  }
+  main .cardsSection .card .questions li:hover {
+    text-decoration: underline;
+  }
+  main .cardsSection .card .bg-black {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  main .cardsSection .card.seg .questions, main .cardsSection .card.efi .questions {
+    font-size: 14px;
+  }
+  main .cardsSection .card.seg:hover, main .cardsSection .card.efi:hover, main .cardsSection .card.preg:hover {
+    padding: 10px;
+  }
+  main .cardsSection .card.seg:hover h2, main .cardsSection .card.efi:hover h2, main .cardsSection .card.preg:hover h2 {
+    margin: -200px 0 0 0;
+    transition: margin 0.5s ease;
+  }
+  main .cardsSection .card.seg:hover .questions, main .cardsSection .card.efi:hover .questions, main .cardsSection .card.preg:hover .questions {
+    opacity: 1;
+    top: 70px;
+    transition: all 1s ease;
+  }
+  main .cardsSection .card.seg:hover.seg .questions, main .cardsSection .card.seg:hover.efi .questions, main .cardsSection .card.efi:hover.seg .questions, main .cardsSection .card.efi:hover.efi .questions, main .cardsSection .card.preg:hover.seg .questions, main .cardsSection .card.preg:hover.efi .questions {
+    width: 90%;
+  }
+  main .cardsSection .card:hover {
+    transform: scale(1.05);
+  }
+}
+
+footer {
+  width: 100%;
+  height: 50px;
+  margin-top: 50px;
+  background-color: #01AAE3;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 1000px) {
+  footer {
+    height: 80px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

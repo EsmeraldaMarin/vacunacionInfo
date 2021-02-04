@@ -1,0 +1,56 @@
+header {
+    width: 100%;
+    background-color: $sColor;
+    height: 50px;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    @media (min-width: $breakpoint) {
+        height: 80px;
+    }
+}
+main {
+    .headSection {
+        width: 100%;
+        height: 180px;
+        position: relative;
+        background-image: url(../../assets/fondo.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        .bg-black {
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: #000000, $alpha: 0.6);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        h1,
+        p {
+            z-index: 2;
+        }
+        p {
+            font-size: 1.4em;
+        }
+        h1 {
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+        @media (min-width: $breakpoint) {
+            height: 280px;
+            background-position-y: 50%;
+            p {
+                font-size: 2.1em;
+            }
+            h1 {
+                font-size: 4em;
+            }
+        }
+    }
+}
