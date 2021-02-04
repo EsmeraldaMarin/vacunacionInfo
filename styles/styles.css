@@ -141,7 +141,7 @@ main .cardsSection .card .bg-black {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 main .cardsSection .card .questions {
@@ -198,7 +198,11 @@ main .cardsSection .card.cardActive i {
   main .cardsSection .card.cidi {
     grid-area: 2/5/3/7;
   }
+  main .cardsSection .card i {
+    display: none;
+  }
   main .cardsSection .card .questions {
+    display: block;
     padding: 0;
     padding-left: 10px;
     opacity: 0;
@@ -206,17 +210,20 @@ main .cardsSection .card.cardActive i {
     color: #fff;
     text-align: left;
   }
+  main .cardsSection .card .questions li {
+    margin: 10px 0;
+  }
   main .cardsSection .card .questions li:hover {
     text-decoration: underline;
-  }
-  main .cardsSection .card .bg-black {
-    background-color: rgba(0, 0, 0, 0.8);
   }
   main .cardsSection .card.seg .questions, main .cardsSection .card.efi .questions {
     font-size: 14px;
   }
   main .cardsSection .card.seg:hover, main .cardsSection .card.efi:hover, main .cardsSection .card.preg:hover {
     padding: 10px;
+  }
+  main .cardsSection .card.seg:hover .bg-black, main .cardsSection .card.efi:hover .bg-black, main .cardsSection .card.preg:hover .bg-black {
+    background-color: rgba(0, 0, 0, 0.7);
   }
   main .cardsSection .card.seg:hover h2, main .cardsSection .card.efi:hover h2, main .cardsSection .card.preg:hover h2 {
     margin: -200px 0 0 0;

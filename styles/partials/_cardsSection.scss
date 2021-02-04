@@ -55,7 +55,7 @@ main {
                 position: absolute;
                 top: 0;
                 left: 0;
-                background-color: rgba($color: #000000, $alpha: 0.6);
+                background-color: rgba($color: #000000, $alpha: 0.5);
             }
             .questions {
                 display: none;
@@ -69,12 +69,12 @@ main {
                     font-size: 14px;
                     text-align: left;
                     color: #fff;
-                    li{
+                    li {
                         margin: 10px 0;
                         list-style: none;
                     }
                 }
-                i{
+                i {
                     margin-top: 10px;
                     transform: rotate(180deg);
                 }
@@ -104,8 +104,11 @@ main {
                 &.cidi {
                     grid-area: 2/5/3/7;
                 }
-
+                i {
+                    display: none;
+                }
                 .questions {
+                    display: block;
                     padding: 0;
                     padding-left: 10px;
                     opacity: 0;
@@ -113,14 +116,13 @@ main {
                     color: #fff;
                     text-align: left;
                     li {
+                        margin: 10px 0;
                         &:hover {
                             text-decoration: underline;
                         }
                     }
                 }
-                .bg-black {
-                    background-color: rgba($color: #000000, $alpha: 0.8);
-                }
+
                 &.seg,
                 &.efi {
                     .questions {
@@ -132,7 +134,9 @@ main {
                 &.preg {
                     &:hover {
                         padding: 10px;
-
+                        .bg-black {
+                            background-color: rgba($color: #000000, $alpha: 0.7);
+                        }
                         h2 {
                             margin: -200px 0 0 0;
                             transition: margin 0.5s ease;
