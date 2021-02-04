@@ -118,19 +118,19 @@ main .cardsSection .card i {
 }
 
 main .cardsSection .card.seg {
-  background-image: url("../../assets/vacuna.jpeg");
+  background-image: url("https://www.consalud.es/uploads/s1/14/00/44/1/vacuna.jpeg");
 }
 
 main .cardsSection .card.efi {
-  background-image: url("../../assets/eficacia.jpg");
+  background-image: url("http://upc.edu.ar/wp-content/uploads/2018/05/174451-300x168.jpg");
 }
 
 main .cardsSection .card.vac {
-  background-image: url("../../assets/vacunate.jpg");
+  background-image: url("https://www.pauta.cl/pauta/site/artic/20210202/imag/foto_0000002320210202122120/A_UNO_1249405.jpg");
 }
 
 main .cardsSection .card.cidi {
-  background-image: url("../../assets/cidi.png");
+  background-image: url("http://ciudaddeoliva.gov.ar/sys/img-noticia/201783189847.png");
   background-position: 50%;
 }
 
