@@ -1,13 +1,16 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: $pFont;
 }
-a{
+a {
     text-decoration: none;
 }
 
-html{
+html {
     scroll-behavior: smooth;
+}
+body > div > a > img {
+    display: none !important;
 }

@@ -24,6 +24,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body > div > a > img {
+  display: none !important;
+}
+
 header {
   width: 100%;
   background-color: #fff;
