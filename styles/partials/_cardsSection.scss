@@ -32,6 +32,9 @@ main {
             }
             a{
                 color: #fff;
+                &:active{
+                    text-decoration: underline;
+                }
             }
             i {
                 font-size: 30px;

@@ -232,6 +232,10 @@ main .cardsSection .card a {
   color: #fff;
 }
 
+main .cardsSection .card a:active {
+  text-decoration: underline;
+}
+
 main .cardsSection .card i {
   font-size: 30px;
   color: #fff;
