@@ -18,43 +18,61 @@ main.questionsMain {
     }
     section {
         padding: 0 20px;
-    }
-    .sec1 {
-        .image {
-            overflow: auto;
+        margin: 10px 0;
 
-            img {
-                width: 200vw;
-            }
+    }
+
+    .fuente {
+        a {
+            text-decoration: underline;
         }
-        .fuente {
-            a {
-                text-decoration: underline;
-            }
+        &:before {
+            content: "Desliza ->";
+            width: 100%;
+            display: block;
+            text-align: end;
         }
     }
-    .sec2 {
+    .image {
+        overflow: auto;
+
+        img {
+            width: 200vw;
+        }
+    }
+    .vac{
+        margin: 50px 0;
+        line-height: 25px;
+    }
+    .sec2,
+    .sec4 {
         padding: 50px 20px;
         clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
         background-color: $tColor;
     }
     @media (min-width: $breakpoint) {
         section {
-            padding: 0 200px;
+            padding: 0 250px;
+            margin: 20px 0;
+            text-align: justify;
         }
-        .sec2 {
-            padding: 80px 200px 100px;
+        .sec2,
+        .sec4 {
+            padding: 60px 250px 80px;
             clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
         }
-        .sec1 {
-            .image {
-                overflow: auto;
 
-                img {
-                    width: 100%;
-                }
+        .fuente:before {
+            display: none;
+        }
+        .image {
+            overflow: auto;
+
+            img {
+                width: 100%;
             }
         }
+
         h2,
         h3 {
             margin: 50px 0 30px;
