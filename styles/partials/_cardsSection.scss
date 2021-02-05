@@ -42,6 +42,9 @@ main {
                 z-index: 2;
                 width: 100%;
             }
+            &.preg{
+                background-color: $sColor;
+            }
             &.seg {
                 background-image: url('https://www.consalud.es/uploads/s1/14/00/44/1/vacuna.jpeg');
             }
