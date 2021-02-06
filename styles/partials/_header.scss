@@ -61,11 +61,9 @@ header {
     }
 
     nav.menuActive {
-        height: auto;
-        //margin-top: 30px;
-        
+        height: auto;        
         animation-name: desplegar;
-        animation-duration: 0.7s;
+        animation-duration: 0.3s;
         animation-timing-function: linear;
         animation-fill-mode: forwards;
        

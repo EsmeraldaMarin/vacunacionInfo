@@ -22,4 +22,18 @@ footer{
             width: 100%;
         }
     }
+    ul{
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        li{
+            margin-bottom: 5px;
+            list-style: none;
+
+            &:first-child{
+                text-decoration: underline;
+            }
+        }
+    }
 }

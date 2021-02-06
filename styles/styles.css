@@ -102,7 +102,7 @@ header .iconosMenu i.iconActive {
 header nav.menuActive {
   height: auto;
   animation-name: desplegar;
-  animation-duration: 0.7s;
+  animation-duration: 0.3s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
 }
@@ -519,5 +519,21 @@ footer > a {
 
 footer > a img {
   width: 100%;
+}
+
+footer ul {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer ul li {
+  margin-bottom: 5px;
+  list-style: none;
+}
+
+footer ul li:first-child {
+  text-decoration: underline;
 }
 /*# sourceMappingURL=styles.css.map */
