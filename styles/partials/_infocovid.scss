@@ -1,0 +1,114 @@
+.covidMain {
+    h2,
+    h3 {
+        margin: 20px 0;
+    }
+    h1 {
+        font-size: 1.6em;
+        text-align: center;
+        padding: 30px 0;
+        background-color: $pColor;
+        color: #fff;
+    }
+    h2 {
+        font-size: 1.6em;
+        text-align: center;
+    }
+    h3 {
+        color: $pColor;
+        font-size: 1.2em;
+    }
+    h4 {
+        margin: 30px 0;
+    }
+    section {
+        padding: 0 20px;
+        margin: 10px 0;
+    }
+    ul {
+        padding: 0 20px;
+    }
+
+    a {
+        margin-left: 20px;
+        text-decoration: underline;
+    }
+
+    .image {
+        overflow: auto;
+
+        img {
+            width: 200vw;
+        }
+    }
+    .vac {
+        margin: 50px 0;
+        line-height: 25px;
+    }
+    .sec1 {
+        margin-top: 50px;
+        p {
+            text-align: justify;
+        }
+    }
+    .sec2 {
+        p {
+            margin-top: 20px;
+        }
+    }
+    .sec3 {
+        p {
+            margin-bottom: 20px;
+        }
+    }
+    li {
+        margin-bottom: 10px;
+    }
+    .sec2,
+    .sec4 {
+        padding: 60px 20px;
+        clip-path: polygon(0 2%, 100% 0, 100% 98%, 0% 100%);
+        background-color: $tColor;
+    }
+    @media (min-width: $breakpoint) {
+        section {
+            padding: 0 250px;
+            margin: 20px 0;
+            text-align: justify;
+        }
+        .sec2,
+        .sec4 {
+            padding: 60px 250px 80px;
+            clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
+        }
+
+        .fuente:before {
+            display: none;
+        }
+        .image {
+            overflow: auto;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        h2,
+        h3 {
+            margin: 50px 0 30px;
+        }
+        p {
+            font-size: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+            padding: 70px 0;
+        }
+        h2 {
+            font-size: 2em;
+        }
+        h3 {
+            font-size: 1.5em;
+        }
+    }
+}

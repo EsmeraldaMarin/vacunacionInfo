@@ -30,9 +30,9 @@ main {
                 z-index: 2;
                 font-size: 1.8em;
             }
-            a{
+            a {
                 color: #fff;
-                &:active{
+                &:active {
                     text-decoration: underline;
                 }
             }
@@ -42,19 +42,24 @@ main {
                 z-index: 2;
                 width: 100%;
             }
-            &.preg{
-                background-color: $sColor;
+            &.preg {
+                background-image: url("https://cdn.aarp.net/content/dam/aarp/health/conditions_treatments/2021/03/1140-vaccine-vials-esp.imgcache.rev.web.1100.627.jpg");
             }
             &.seg {
-                background-image: url('https://www.consalud.es/uploads/s1/14/00/44/1/vacuna.jpeg');
+                background-image: url("https://www.consalud.es/uploads/s1/14/00/44/1/vacuna.jpeg");
             }
             &.efi {
-                background-image: url('http://upc.edu.ar/wp-content/uploads/2018/05/174451-300x168.jpg');
+                background-image: url("http://upc.edu.ar/wp-content/uploads/2018/05/174451-300x168.jpg");
+            }
+            &.cepas {
+                background-image: url("https://cdn.aarp.net/content/dam/aarp/health/healthy-living/2021/01/1140-coronavirus-image-esp.imgcache.rev.web.1100.627.jpg");
+            }
+            &.infocovid{
+                background-image: url("https://www.paho.org/sites/default/files/styles/flexslider_full/public/2020-03/blue-covid-banner.jpg?h=96546727&itok=cZemcbKa");
             }
             &.vac {
-                
-                background-image: url('https://www.pauta.cl/pauta/site/artic/20210202/imag/foto_0000002320210202122120/A_UNO_1249405.jpg');
-                a{
+                background-image: url("https://www.pauta.cl/pauta/site/artic/20210202/imag/foto_0000002320210202122120/A_UNO_1249405.jpg");
+                a {
                     position: absolute;
                     top: 0;
                     width: 100%;
@@ -63,17 +68,16 @@ main {
                 }
             }
             &.cidi {
-                background-image: url('http://ciudaddeoliva.gov.ar/sys/img-noticia/201783189847.png');
+                background-image: url("http://ciudaddeoliva.gov.ar/sys/img-noticia/201783189847.png");
                 background-position: 50%;
                 position: relative;
-                a{
+                a {
                     position: absolute;
                     top: 0;
                     width: 100%;
                     height: 100%;
                     z-index: 3;
                 }
-               
             }
             .bg-black {
                 width: 100%;
@@ -108,28 +112,35 @@ main {
             }
         }
         @media (min-width: $breakpoint) {
+            padding: 20px;
             display: grid;
-            grid-template-columns: repeat(6, 200px);
-            grid-template-rows: repeat(2, 270px);
-            grid-gap: 30px;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(3, 270px);
+            grid-gap: 20px;
             justify-content: center;
             .card {
                 width: 100%;
                 height: 100%;
+                &.infocovid{
+                    grid-area: 1/1/2/3;
+                }
+                &.cepas{
+                    grid-area: 1/3/2/5;
+                }
                 &.preg {
-                    grid-area: 1/1/2/4;
+                    grid-area: 1/5/2/7;
                 }
                 &.seg {
-                    grid-area: 1/4/2/7;
+                    grid-area: 2/1/3/4;
                 }
                 &.efi {
-                    grid-area: 2/1/3/3;
+                    grid-area: 2/4/3/7;
                 }
                 &.vac {
-                    grid-area: 2/3/3/5;
+                    grid-area: 3/1/4/4;
                 }
                 &.cidi {
-                    grid-area: 2/5/3/7;
+                    grid-area: 3/4/4/7;
                 }
                 i {
                     display: none;
