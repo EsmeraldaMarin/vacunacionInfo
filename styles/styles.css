@@ -335,7 +335,7 @@ main .cardsSection .card.cardActive i {
 
 @media (min-width: 1000px) {
   main .cardsSection {
-    padding: 20px;
+    padding: 20px 50px;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(3, 270px);
@@ -385,25 +385,31 @@ main .cardsSection .card.cardActive i {
   main .cardsSection .card .questions li:hover {
     text-decoration: underline;
   }
+  main .cardsSection .card a {
+    font-size: 14px;
+  }
+  main .cardsSection .card a:hover {
+    text-decoration: underline;
+  }
   main .cardsSection .card.seg .questions, main .cardsSection .card.efi .questions {
     font-size: 14px;
   }
-  main .cardsSection .card.seg:hover, main .cardsSection .card.efi:hover, main .cardsSection .card.preg:hover {
+  main .cardsSection .card.seg:hover, main .cardsSection .card.efi:hover, main .cardsSection .card.preg:hover, main .cardsSection .card.infocovid:hover, main .cardsSection .card.cepas:hover {
     padding: 10px;
   }
-  main .cardsSection .card.seg:hover .bg-black, main .cardsSection .card.efi:hover .bg-black, main .cardsSection .card.preg:hover .bg-black {
+  main .cardsSection .card.seg:hover .bg-black, main .cardsSection .card.efi:hover .bg-black, main .cardsSection .card.preg:hover .bg-black, main .cardsSection .card.infocovid:hover .bg-black, main .cardsSection .card.cepas:hover .bg-black {
     background-color: rgba(0, 0, 0, 0.7);
   }
-  main .cardsSection .card.seg:hover h2, main .cardsSection .card.efi:hover h2, main .cardsSection .card.preg:hover h2 {
+  main .cardsSection .card.seg:hover h2, main .cardsSection .card.efi:hover h2, main .cardsSection .card.preg:hover h2, main .cardsSection .card.infocovid:hover h2, main .cardsSection .card.cepas:hover h2 {
     margin: -200px 0 0 0;
     transition: margin 0.5s ease;
   }
-  main .cardsSection .card.seg:hover .questions, main .cardsSection .card.efi:hover .questions, main .cardsSection .card.preg:hover .questions {
+  main .cardsSection .card.seg:hover .questions, main .cardsSection .card.efi:hover .questions, main .cardsSection .card.preg:hover .questions, main .cardsSection .card.infocovid:hover .questions, main .cardsSection .card.cepas:hover .questions {
     opacity: 1;
     top: 70px;
     transition: all 1s ease;
   }
-  main .cardsSection .card.seg:hover.seg .questions, main .cardsSection .card.seg:hover.efi .questions, main .cardsSection .card.efi:hover.seg .questions, main .cardsSection .card.efi:hover.efi .questions, main .cardsSection .card.preg:hover.seg .questions, main .cardsSection .card.preg:hover.efi .questions {
+  main .cardsSection .card.seg:hover.seg .questions, main .cardsSection .card.seg:hover.efi .questions, main .cardsSection .card.efi:hover.seg .questions, main .cardsSection .card.efi:hover.efi .questions, main .cardsSection .card.preg:hover.seg .questions, main .cardsSection .card.preg:hover.efi .questions, main .cardsSection .card.infocovid:hover.seg .questions, main .cardsSection .card.infocovid:hover.efi .questions, main .cardsSection .card.cepas:hover.seg .questions, main .cardsSection .card.cepas:hover.efi .questions {
     width: 90%;
   }
   main .cardsSection .card:hover {
