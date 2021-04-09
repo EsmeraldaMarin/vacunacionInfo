@@ -684,4 +684,12 @@ footer ul li {
 footer ul li:first-child {
   text-decoration: underline;
 }
+
+footer ul li a {
+  color: #fff;
+}
+
+footer ul li a i {
+  font-size: 20px;
+}
 /*# sourceMappingURL=styles.css.map */

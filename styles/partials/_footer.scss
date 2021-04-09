@@ -34,6 +34,12 @@ footer{
             &:first-child{
                 text-decoration: underline;
             }
+            a{
+                i{
+                    font-size: 20px;
+                }
+                color: #fff;
+            }
         }
     }
 }
