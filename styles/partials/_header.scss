@@ -24,8 +24,8 @@ header {
         ul {
             height: 100%;
             width: 100%;
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-rows: repeat(8, 1fr);
             align-items: center;
             li {
                 list-style: none;
@@ -62,11 +62,12 @@ header {
     }
 
     nav.menuActive {
-        height: auto;        
-        animation-name: desplegar;
+        height: 70vh; 
+        transition: height .5s ease;       
+        /* animation-name: desplegar;
         animation-duration: 0.3s;
         animation-timing-function: linear;
-        animation-fill-mode: forwards;
+        animation-fill-mode: forwards; */
        
     }
 
@@ -79,6 +80,7 @@ header {
             background-color: inherit;
             ul {
                 height: 100%;
+                display: flex;
                 flex-direction: row;
                 justify-content: flex-end;
                 li {
@@ -93,7 +95,7 @@ header {
                     }
                     a {
                         line-height: 80px;
-                        padding: 0 30px;
+                        padding: 0 20px;
                         font-weight: bold;
                         color: $pColor;
                     }

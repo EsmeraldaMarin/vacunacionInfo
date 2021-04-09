@@ -79,7 +79,7 @@
         .sec2,
         .sec4 {
             padding: 60px 250px 80px;
-            clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
+            clip-path: polygon(0 3%, 100% 0, 100% 97%, 0% 100%);
         }
 
         .fuente:before {
@@ -96,8 +96,9 @@
         h2,
         h3 {
             margin: 50px 0 30px;
+            text-align: left;
         }
-        p {
+        p, li {
             font-size: 20px;
         }
         h1 {
@@ -109,6 +110,9 @@
         }
         h3 {
             font-size: 1.5em;
+        }
+        a{
+            margin-left: 250px;
         }
     }
 }
